@@ -12,9 +12,9 @@ minmax (PG_FUNCTION_ARGS)
 {
 
         Point *funk =  PG_GETARG_POINT_P(0);
-        int deger = PG_GETARG_INT32(1);
-        int funkx = funk->x;
-        int funky = funk->y;
+        int64 deger = PG_GETARG_INT64(1);
+        int64 funkx = funk->x;
+        int64 funky = funk->y;
         if ( funkx ==  0 && funky == 0)
         {
                 funkx = deger;
