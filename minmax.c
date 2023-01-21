@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include "postgres.h"
 #include "fmgr.h"
-#include <string.h>
 #include "utils/geo_decls.h"
 PG_MODULE_MAGIC;
 
@@ -16,6 +15,11 @@ minmax (PG_FUNCTION_ARGS)
         int deger = PG_GETARG_INT32(1);
         int funkx = funk->x;
         int funky = funk->y;
+        if ( funkx ==  0 && funky == 0)
+        {
+                funkx = deger;
+                funky = deger;
+        }
 
         if ( deger < funkx )
         {
