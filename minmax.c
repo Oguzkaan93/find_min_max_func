@@ -21,11 +21,11 @@ minmax (PG_FUNCTION_ARGS)
                 funky = deger;
         }
 
-        if ( deger < funkx )
+        else if ( deger < funkx )
         {
                 funkx = deger;
         }
-        if ( deger > funky )
+        else if ( deger > funky )
         {
                 funky = deger;
         }
