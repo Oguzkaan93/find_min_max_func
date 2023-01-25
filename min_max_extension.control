@@ -1,0 +1,4 @@
+# min_max_extension"
+comment = 'find min and max values from given inputs'
+default_version = '0.0.1'
+relocatable = true
