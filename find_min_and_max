@@ -1,7 +1,0 @@
-CREATE or replace AGGREGATE find_min_and_max(bigint)
-(
-    SFUNC    = find_min_and_max_func, -- State function
-    STYPE    = point,       -- State type
-    FINALFUNC = find_min_and_max_final_func,
-    initcond = '(0,0)'
-);
